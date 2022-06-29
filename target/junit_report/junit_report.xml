@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="52.07">
+<testcase classname="Login Page feature" name="Validate login page" time="15.128">
+<system-out><![CDATA[Given User is on login page.................................................passed
+Then Username field is displayed............................................passed
+And Password field is displayed.............................................passed
+And Login button is displayed...............................................passed
+And Keep me login checkbox is displayed.....................................passed
+And Actitime logo is displayed..............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login Page feature" name="Login successfully" time="36.169">
+<failure message="Dashboard URL is changed !!! expected [http://localhost/user/submit_tt.do123] but found [http://localhost/user/submit_tt.do]" type="java.lang.AssertionError"><![CDATA[Given User is on login page.................................................passed
+When User enters username...................................................passed
+And User enters password....................................................passed
+And Clicks on login button..................................................passed
+Then Dashboard URL should be displayed as "http://localhost/user/submit_tt.do123".failed
+And Dashboard page title should be displayed as "actiTIME -  Enter Time-Track".skipped
+
+StackTrace:
+java.lang.AssertionError: Dashboard URL is changed !!! expected [http://localhost/user/submit_tt.do123] but found [http://localhost/user/submit_tt.do]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:629)
+	at org.pages.LoginPage.verifyDashboardUrl(LoginPage.java:98)
+	at stepDefinitions.LoginStepDef.dashboard_url_should_be_displayed_as(LoginStepDef.java:52)
+	at ✽.Dashboard URL should be displayed as "http://localhost/user/submit_tt.do123"(file:///G:/AccelerationNew/Jan_27_Cucumber/src/test/resources/org/features/LoginPage.feature:18)
+]]></failure>
+</testcase>
+</testsuite>
